@@ -1,0 +1,60 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "帮您淘优惠",
+    "description": "当您在京东等电商平台浏览商品详情页时，为您获取该商品的优惠券，领取优惠券后下单立减。",
+    "version": "2.0.0",
+    "background": {
+        "scripts": [
+            "js/request.js",
+            "js/utils.js",
+            "js/fp2.js",
+            "js/background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "images/icon/logo_128.png",
+        "default_title": "帮您淘优惠",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "unlimitedStorage"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "exclude_matches": [
+                "*://*.gov.cn/*",
+                "*://*.360.cn/*",
+                "*://*.so.com/*"
+            ],
+            "js": [
+                "js/request.js",
+                "js/utils.js",
+                "js/fp2.js",
+                "js/contentScript.js"
+            ],
+            "css": [
+                "css/injectScript.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "js/injectScript.js"
+    ],
+    "icons": {
+        "16": "images/icon/logo_16.png",
+        "32": "images/icon/logo_32.png",
+        "48": "images/icon/logo_48.png",
+        "128": "images/icon/logo_128.png"
+    }
+}

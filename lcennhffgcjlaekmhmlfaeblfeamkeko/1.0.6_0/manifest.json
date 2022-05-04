@@ -1,0 +1,62 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "萤火虫惠聚",
+    "description": "萤火虫惠聚",
+    "version": "1.0.6",
+    "background": {
+        "scripts": [
+            "js/request.js",
+            "js/utils.js",
+            "js/fp2.js",
+            "js/background.js"
+        ],
+        "persistent": true
+    },
+    "browser_action": {
+        "default_icon": "images/icon/logo_128.png",
+        "default_title": "萤火虫惠聚",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "http://*/*",
+        "https://*/*",
+        "storage",
+        "tabs",
+        "notifications"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "http://*/*",
+                "https://*/*"
+            ],
+            "exclude_matches": [
+                "*://*.gov.cn/*",
+                "*://*.360.com/*",
+                "*://*.360.cn/*",
+                "*://*.so.com/*"
+            ],
+            "js": [
+                "js/request.js",
+                "js/utils.js",
+                "js/fp2.js",
+                "js/contentScript.js"
+            ],
+            "css": [
+                "css/injectScript.css"
+            ],
+            "run_at": "document_start"
+        }
+    ],
+    "web_accessible_resources": [
+        "js/injectScript.js"
+    ],
+    "icons": {
+        "16": "images/icon/logo_16.png",
+        "32": "images/icon/logo_32.png",
+        "48": "images/icon/logo_48.png",
+        "128": "images/icon/logo_128.png"
+    }
+}

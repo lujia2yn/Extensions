@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>popup</title>
+  <link href="./css/popup.css" rel="stylesheet">
+</head>
+
+<body>
+  <div id="app" class="w-app">
+    <div class="w-title">
+      <div class="w-logo" domname="a" href="https://www.yhchj.com"><img src="./images/logo.png"></div>
+      <div class="w-other ml-auto">
+        <span class="ml10 cursor" id="refreshContent"><i class="iconfont icon-shuaxin"></i></span>
+        <span class="ml10" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span>
+      </div>
+    </div>
+    <div class="w-content" style="display: none;" id="YHCPopupContent">
+      <div class="w-hot" id="BigFirstBox"><!-- <span domname="a" href="https://www.yhchj.com"><img src="./images/data/hot.jpg"></span> --></div>
+      <div class="w-other">
+        <div class="w-search">
+          <div class="w-title dp-f align-items-center justify-content-center pl10 pt15 pr10 pb5">
+            <span class="f18 b mr10">萤火虫惠聚</span>
+            <span class="f18 b mr10 orange">优惠多多</span>
+            <!-- <span class="ml-auto orange" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span> -->
+          </div>
+          <!-- <div class="w-search-wrap">
+            <form class="dp-f align-items-center" action="https://www.yhchj.com/" method="get" target="_blank">
+              <div><input type="text" name="key" placeholder="关键词搜索" autocomplete="off"></div>
+              <div><button type="submit"><i class="iconfont icon-xiazai15"></i></button></div>
+            </form>
+          </div> -->
+          <div class="tc pt5">
+            <span class="dp-i-b w-search-btn" domname="a" href="https://www.yhchj.com">访问萤火虫惠聚官方首页</span>
+          </div>
+        </div>
+        <div class="w-nav">
+          <div class="w-title dp-f align-items-center pl10 pt5 pr10 pb5">
+            <span class="f14 b mr10">为您推荐</span>
+            <span class="ml-auto orange" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span>
+          </div>
+          <ul class="w-nav-wrap">
+            <li domname="a" href="https://www.yhchj.com"><i class="iconfont icon-rexiao"></i><b>热销</b></li>
+            <li domname="a" href="https://www.yhchj.com"><i class="iconfont icon-Z-daojishi"></i><b>限时</b></li>
+            <li domname="a" href="https://www.yhchj.com"><i class="iconfont icon-huangguan"></i><b>专区</b></li>
+            <li domname="a" href="https://www.yhchj.com"><i class="iconfont icon-huafei"></i><b>话费</b></li>
+          </ul>
+          <div class="w-nav-hot ml10 mr10 mt2" id="swiperHot">
+            <span class="w-l mr5"><i class="iconfont icon-caret-left f14"></i></span>
+            <div class="w-swiper-box">
+              <!-- <div class="w-item" domname="a" href="https://www.yhchj.com"><b>腾讯视频会员</b><i>￥12起</i><span>抢购</span></div>
+              <div class="w-item" domname="a" href="https://www.yhchj.com"><b>芒果TV视频会员</b><i>￥12起</i><span>抢购</span></div>
+              <div class="w-item" domname="a" href="https://www.yhchj.com"><b>优酷视频会员</b><i>￥12起</i><span>抢购</span></div> -->
+            </div>
+            <span class="w-r ml5"><i class="iconfont icon-caret-right f14"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="w-hot-other" id="BigBox">
+        <!-- <div class="w-hot"><span domname="a" href="https://www.yhchj.com"><img src="./images/data/hot.jpg"></span></div>
+        <div class="w-hot"><span domname="a" href="https://www.yhchj.com"><img src="./images/data/hot.jpg"></span></div>
+        <div class="w-hot"><span domname="a" href="https://www.yhchj.com"><img src="./images/data/hot.jpg"></span></div>
+        <div class="w-hot"><span domname="a" href="https://www.yhchj.com"><img src="./images/data/hot.jpg"></span></div> -->
+      </div>
+      <!-- <div class="w-product">
+        <div class="w-title dp-f align-items-center">
+          <span class="w-t w-red">视频会员</span>
+          <span class="ml-auto" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span>
+        </div>
+        <div class="p10 w-con" domname="a" href="https://www.yhchj.com">
+          <img src="https://fuluapiossproductpop.oss-cn-hangzhou.aliyuncs.com/cde70d69-45a1-43e5-acad-359ea3680088.png" class="dp-b">
+          <b>爱奇艺黄金会员</b>
+          <div class="dp-f align-items-center">
+            <span class="f12 red">
+              <i class="f14">￥12</i>起
+            </span>
+            <span class="w-btn ml-auto">去抢购</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-product">
+        <div class="w-title dp-f align-items-center">
+          <span class="w-t w-orange">社交直播</span>
+          <span class="ml-auto" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span>
+        </div>
+        <div class="p10 w-con" domname="a" href="https://www.yhchj.com">
+          <img src="https://fuluapiossproductpop.oss-cn-hangzhou.aliyuncs.com/cde70d69-45a1-43e5-acad-359ea3680088.png" class="dp-b">
+          <b>爱奇艺黄金会员</b>
+          <div class="dp-f align-items-center">
+            <span class="f12 red">
+              <i class="f14">￥12</i>起
+            </span>
+            <span class="w-btn ml-auto">去抢购</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-product">
+        <div class="w-title dp-f align-items-center">
+          <span class="w-t w-red">视频会员</span>
+          <span class="ml-auto" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span>
+        </div>
+        <div class="p10 w-con" domname="a" href="https://www.yhchj.com">
+          <img src="https://fuluapiossproductpop.oss-cn-hangzhou.aliyuncs.com/cde70d69-45a1-43e5-acad-359ea3680088.png" class="dp-b">
+          <b>爱奇艺黄金会员</b>
+          <div class="dp-f align-items-center">
+            <span class="f12 red">
+              <i class="f14">￥12</i>起
+            </span>
+            <span class="w-btn ml-auto">去抢购</span>
+          </div>
+        </div>
+      </div>
+      <div class="w-product">
+        <div class="w-title dp-f align-items-center">
+          <span class="w-t w-orange">社交直播</span>
+          <span class="ml-auto" domname="a" href="https://www.yhchj.com"><i class="iconfont icon-gengduo1"></i></span>
+        </div>
+        <div class="p10 w-con" domname="a" href="https://www.yhchj.com">
+          <img src="https://fuluapiossproductpop.oss-cn-hangzhou.aliyuncs.com/cde70d69-45a1-43e5-acad-359ea3680088.png" class="dp-b">
+          <b>爱奇艺黄金会员</b>
+          <div class="dp-f align-items-center">
+            <span class="f12 red">
+              <i class="f14">￥12</i>起
+            </span>
+            <span class="w-btn ml-auto">去抢购</span>
+          </div>
+        </div>
+      </div> -->
+    </div>
+    <div class="w-content-more" domname="a" href="https://www.yhchj.com">更多优惠</div>
+  </div>
+  <script src="./js/request.js"></script>
+  <script src="./js/popup.js"></script>
+</body>
+
+</html>
